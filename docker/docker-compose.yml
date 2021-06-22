@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+    web:
+        image: "gingergraham/wattsweb:1.0.0.1"
+        ports: 
+            - 80:80
+            - 443:443
+        volumes:
+            - C:\Temp\Cert\STAR_wattsfamily_org_uk.crt:/usr/local/apache2/conf/server.crt
+            - C:\Temp\Cert\STAR_wattsfamily_org_uk.key:/usr/local/apache2/conf/server.key
+            - C:\Users\watts\Development\GitHub\web-wattsfamily\httpd.conf:/usr/local/apache2/conf/httpd.conf
+            - C:\Users\watts\Development\GitHub\web-wattsfamily\.htaccess:/usr/local/apache2/.htaccess
+            - C:\Temp\:/tmp/
+        
